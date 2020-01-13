@@ -1,0 +1,28 @@
+questions:
+- variable: nfs.server
+  default: ""
+  required: true
+  label: 服务器地址
+  type: string
+  group: "NFS服务器配置"
+- variable: nfs.path
+  default: "/"
+  description: "挂载点， 默认'/'"
+  label: 挂载点
+  type: string
+  group: "NFS服务器配置"
+- variable: nfs.mountOptions
+  default: "{vers=4,minorversion=0,noresvport}"
+  label: 其他参数
+  type: string
+  group: "NFS服务器配置"
+- variable: storageClass.archiveOnDelete
+  default: false
+  label: 删除PVC时是否进行数据归档
+  type: boolean
+  group: "存储配置"
+- variable: storageClass.defaultClass
+  default: true
+  label: 是否作为默认存储类
+  type: boolean
+  group: "存储配置"
